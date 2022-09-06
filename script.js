@@ -1,9 +1,12 @@
 
 function createGrid(size) {
+    document.querySelector('div').removeAttribute('style');
     const container = document.querySelector('.container');
-    for (i = 0; i < size; i++) {
+    for (i = 0; i < size**2; i++) {
         const content = document.createElement('div');
         content.classList.add('content');
+        content.style.width = Math.sqrt((1024**2)/(size**2)) + 'px';    // calc the required width/height to distribute the boxes evenly in the container
+        content.style.height = Math.sqrt((1024**2)/(size**2)) + 'px';
         content.addEventListener('mouseover', function (e) {
             e.target.style.background = 'black';
           });
@@ -13,7 +16,7 @@ function createGrid(size) {
 
 let btn = document.getElementById("btn");
 btn.addEventListener('click', event => {
-  getSize();
+    getSize();
 });
 
 function getSize() {
@@ -21,4 +24,3 @@ function getSize() {
     createGrid(size);
 }
 
-createGrid();
