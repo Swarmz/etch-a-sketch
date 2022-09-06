@@ -2,13 +2,13 @@ body {
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
-    background-color: rgb(169, 192, 196)
-      
+    background-color: rgb(169, 192, 196) 
 }
 
 .gameStart {
     padding: 25px;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .container {
@@ -16,15 +16,8 @@ body {
     width: 1024px;
     height: 1024px;
     flex-flow: row wrap;
-    border: 5px solid rgb(222, 224, 64);
-
-    
+    border: 5px solid rgb(222, 224, 64);    
 }
 
-.content {
-    width: 64px;
-    height: 64px;
-    
-  
-}
+
 
