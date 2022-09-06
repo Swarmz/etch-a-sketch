@@ -1,6 +1,5 @@
 
 function createGrid(size) {
-    document.querySelector('div').removeAttribute('style');
     const container = document.querySelector('.container');
     for (i = 0; i < size**2; i++) {
         const content = document.createElement('div');
@@ -14,8 +13,16 @@ function createGrid(size) {
     }
 }
 
+function eraseGrid() {
+    const removeContent = document.querySelectorAll('.content');
+    removeContent.forEach(content => {
+        content.remove();
+    });
+}
+
 let btn = document.getElementById("btn");
 btn.addEventListener('click', event => {
+    eraseGrid();
     getSize();
 });
 
@@ -23,4 +30,7 @@ function getSize() {
     let size = prompt("Enter a number to size your Etch-A-Sketch(1-100)", 16);
     createGrid(size);
 }
+
+
+createGrid(16);
 
