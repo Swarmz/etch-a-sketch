@@ -13,6 +13,7 @@ body {
     width: 1024px;
     height: 1024px;
     flex-flow: row wrap;
+    border: 5px solid palegreen;
 }
 
 .content {
